@@ -4,6 +4,8 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 # gazelle:proto package
 # gazelle:proto_group go_package
 # gazelle:exclude **/empty.go
+# gazelle:resolve proto google/api/field_behavior.proto @com_google_googleapis//google/api:field_behavior_proto
+# gazelle:resolve proto go google/api/field_behavior.proto @com_google_googleapis//google/api:annotations_go_proto
 gazelle(name = "gazelle")
 
 go_library(

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package hazaelsan.foo.v1;
+
+option go_package = "github.com/hazaelsan/bzlrepo/proto/v1/foo";
+
+message Foo {
+  string bar = 1;
+}

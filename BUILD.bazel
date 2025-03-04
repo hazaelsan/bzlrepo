@@ -1,6 +1,9 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
+# gazelle:proto package
+# gazelle:proto_group go_package
+# gazelle:exclude **/empty.go
 gazelle(name = "gazelle")
 
 go_library(
@@ -8,4 +11,5 @@ go_library(
     srcs = ["foo.go"],
     importpath = "github.com/hazaelsan/bzlrepo",
     visibility = ["//visibility:public"],
+    deps = ["//proto/v1:foo_go_proto"],
 )

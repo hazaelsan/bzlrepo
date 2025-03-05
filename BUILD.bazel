@@ -13,5 +13,4 @@ go_library(
     srcs = ["foo.go"],
     importpath = "github.com/hazaelsan/bzlrepo",
     visibility = ["//visibility:public"],
-    deps = ["//proto/v1:foo_go_proto"],
 )

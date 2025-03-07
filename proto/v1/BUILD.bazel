@@ -4,5 +4,5 @@ proto_library(
     name = "foo_proto",
     srcs = ["foo.proto"],
     visibility = ["//visibility:public"],
-    deps = ["@com_google_googleapis//google/api:field_behavior_proto"],
+    deps = ["@googleapis//google/api:field_behavior_proto"],
 )

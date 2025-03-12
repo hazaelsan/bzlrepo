@@ -5,7 +5,10 @@ proto_library(
     name = "foo_proto",
     srcs = ["foo.proto"],
     visibility = ["//visibility:public"],
-    deps = ["@com_google_googleapis//google/api:field_behavior_proto"],
+    deps = [
+        "@googleapis//google/api:field_behavior_proto",
+        "@googleapis//google/rpc:status_proto",
+    ],
 )
 
 go_proto_library(
@@ -13,5 +16,8 @@ go_proto_library(
     importpath = "github.com/hazaelsan/bzlrepo/proto/v1/foo",
     proto = ":foo_proto",
     visibility = ["//visibility:public"],
-    deps = ["@com_google_googleapis//google/api:annotations_go_proto"],
+    deps = [
+        "@googleapis//google/api:annotations_go_proto",
+        "@googleapis//google/rpc:status_go_proto",
+    ],
 )

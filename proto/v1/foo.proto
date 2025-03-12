@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/api/field_behavior.proto";
+import "google/rpc/status.proto";
 
 package hazaelsan.foo.v1;
 
@@ -8,4 +9,5 @@ option go_package = "github.com/hazaelsan/bzlrepo/proto/v1/foo";
 
 message Foo {
   string bar = 1 [(google.api.field_behavior) = REQUIRED];
+  google.rpc.Status status = 2;
 }

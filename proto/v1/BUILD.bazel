@@ -17,7 +17,7 @@ go_proto_library(
     proto = ":foo_proto",
     visibility = ["//visibility:public"],
     deps = [
-        "@googleapis//google/api:annotations_go_proto",
-        "@googleapis//google/rpc:status_go_proto",
+        "@org_golang_google_genproto_googleapis_api//annotations",
+        "@org_golang_google_genproto_googleapis_rpc//status",
     ],
 )
